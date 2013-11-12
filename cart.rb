@@ -15,10 +15,10 @@ class Cart
 	end
 
 	def validate
-		@items.each { |i|  puts "Item has no price" if i.price.nil? }
+		@items.each { |i|  puts "Item has no price" if i.real_price.nil? }
 	end
 
 	def delete_invalide_items
-		@items.delete_if { |i| i.price.nil? }
+		@items.delete_if { |i| i.real_price.nil? }
 	end
 end
