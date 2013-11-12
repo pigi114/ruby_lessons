@@ -1,19 +1,16 @@
 class Item
 
-	attr_reader :price , :weight, :name
+	attr_reader :price , :name
 	attr_writer :price
 
 	def initialize(options={})
 		@price  = options[:price]
-		@weight = options[:weight]
 		@name   = options[:name]
 	end
 
 	def info
-		#yield([{:name => 'name'},{:name => 'name1', 'type'=> 'wefwe'}])
-		yield(price)
-		yield(weight)
-		yield(name)
+		yield("Cost: " + price.to_s)
+		yield("Name: " + name)
 	end
 end
 
