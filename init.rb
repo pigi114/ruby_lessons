@@ -13,18 +13,11 @@ cart.add_item item2
 cart.add_item item3
 
 
-p item1.respond_to?(:weight)
-p item2.respond_to?(:weight)
-
-#p cart.items
 cart.validate
 
 cart.delete_invalide_items
 
-#p cart.items
-
-
 cart.items.each { |item| item.info { |attr| puts attr } }
 
 
-
+puts Item.discount
