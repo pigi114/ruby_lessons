@@ -10,7 +10,10 @@ class Item
 	end
 
 	def info
+		#yield([{:name => 'name'},{:name => 'name1', 'type'=> 'wefwe'}])
 		yield(price)
+		yield(weight)
+		yield(name)
 	end
 end
 
